@@ -1,28 +1,19 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700');
+/* FONTS */
+
 html {
     position: relative;
     min-height: 100%;
 }
 
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
-
-
-/* FONTS */
-
-@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700');
-
-/* FONTS */
-
-
 /* COMMON ELEMENTS */
-
 body {
-    background-color: #F2F2F2;
+    background-color: #ffffff;
     color: #707070;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 60px;
 }
 
 a {
@@ -34,8 +25,9 @@ a:hover {
 }
 
 h1 {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 20px;
+    color: #707070;
+    font-weight: bold;
 }
 
 span.titletext {
@@ -45,11 +37,12 @@ span.titletext {
     text-transform: uppercase;
 }
 
-p {}
+p {
+    font-size: 16px;
+}
 
 
 /* Numbers */
-
 span.numbers {
     background: #ffffff;
     border-radius: 0.8em;
@@ -67,13 +60,7 @@ span.numbers {
 span.warning {
     color: #E9AD32;
 }
-
-
 /* Numbers */
-
-.main-content {
-    margin-top: -80px;
-}
 
 
 /* BUTTONS */
@@ -131,39 +118,6 @@ nav {}
 
 
 /* NAVIGATION */
-
-
-/* Top Scroll Menu */
-
-.top-menu {
-    min-height: 250px;
-    background-color: #3F3F3F;
-}
-
-div.scrollmenu {
-    background-color: #3F3F3F;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 20px 0px 10px 0px;
-}
-
-div.scrollmenu a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    padding: 15px;
-    width: 175px;
-    text-decoration: none;
-    border: 1px solid #C7C7C7;
-}
-
-div.scrollmenu a:hover {
-    background-color: #777;
-}
-
-
-/* Top Scroll Menu */
 
 
 /* Wizard Cards */

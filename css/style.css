@@ -1,0 +1,264 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700');
+
+/* FONTS */
+
+
+/* COMMON ELEMENTS */
+
+body {
+    background-color: #F2F2F2;
+    color: #707070;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    color: #523492;
+}
+
+a:hover {
+    color: #523492;
+}
+
+h1 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+span.titletext {
+    font-family: 'Cinzel', serif;
+    color: #455E6D;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+p {}
+
+
+/* Numbers */
+
+span.numbers {
+    background: #ffffff;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #C42653;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 10px;
+    text-align: center;
+    width: 1.6em;
+}
+
+span.warning {
+    color: #E9AD32;
+}
+
+
+/* Numbers */
+
+.main-content {
+    margin-top: -80px;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    margin-left: 5px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #019949;
+    border-color: #019949;
+    padding: 8px 20px 8px 20px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #019949;
+    border-color: #019949;
+    padding: 8px 20px 8px 20px;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #523492;
+    border-color: #523492;
+    padding: 8px 20px 8px 20px;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #523492;
+    border-color: #523492;
+    padding: 8px 20px 8px 20px;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
+}
+
+
+/* BUTTONS */
+
+
+/* COMMON ELEMENTS */
+
+
+/* NAVIGATION */
+
+nav {}
+
+
+/* NAVIGATION */
+
+
+/* Top Scroll Menu */
+
+.top-menu {
+    min-height: 250px;
+    background-color: #3F3F3F;
+}
+
+div.scrollmenu {
+    background-color: #3F3F3F;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 20px 0px 10px 0px;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    width: 175px;
+    text-decoration: none;
+    border: 1px solid #C7C7C7;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+
+
+/* Top Scroll Menu */
+
+
+/* Wizard Cards */
+
+.wizard-card {
+    color: #707070;
+    background-color: #fff;
+    min-height: 150px;
+    border-width: 0 1px 1px 1px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+
+.wizard-card-title {
+    border: 1px solid #CCCDCF;
+}
+
+.wizard-card-result {
+    background-color: #fff;
+    border-width: 0 0 1px 0;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+
+.wizard-card-goal {
+    background-color: #F5F5F5;
+    border-width: 0 0 1px 1px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+
+.wizard-red {
+    background-color: #C42653;
+}
+
+.wizard-yellow {
+    background-color: #E9AD32;
+}
+
+.wizard-green {
+    background-color: #009B49;
+}
+
+.wizard-grey {
+    background-color: #F4F4F4;
+}
+
+
+/* Wizard Cards */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #3F3F3F;
+    color: #ffffff;
+}
+
+
+/* Media Queries */
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {}
+
+
+/*Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {}
+
+
+/*Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .wizard-card-goal {
+        border-width: 0 1px 0 1px;
+        /* top right bottom left */
+    }
+    .wizard-card-result {
+        border-width: 0;
+        /* top right bottom left */
+    }
+}
+
+
+/*Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {}
+
+
+/* Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */

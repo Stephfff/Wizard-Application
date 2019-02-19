@@ -114,6 +114,12 @@ span.warning {
 .btn-secondary:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
 }
+
+.disabled, .btn-primary:disabled {
+    color: #000000 !important;
+    background-color: #DEDEDE !important;
+    border-color: #DEDEDE !important;
+}
 /* BUTTONS */
 
 /* COMMON ELEMENTS */

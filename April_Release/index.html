@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="images/wizard_logo.png" width="30" alt="Wizard"><span class="titletext">Wizard</span>
+            <a class="navbar-brand" href="#"><img src="images/wizard_logo.png" width="30" alt="Wizard"><span class="titletext">Wizard<sup>&copy;</sup></span>
                 <span class="sr-only">(current)</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,47 +70,39 @@
     <div class="section pt-4 pb-2">
       <div class="container">
           <div class="row">
-            <div class="col-md-6">
-                <img src="images/wizard_logo.png" width="35" alt="Wizard"><span class="titletext">Priorities Wizard</span>
+            <div class="col-md-3">
+                <img src="images/wizard_logo.png" width="35" alt="Priority Wizard"><span class="titletext">Priority Wizard</span>
             </div>
-            <div class="col-md-6 text-right mb-3 d-none d-lg-block d-print-none">
+            <div class="col-md-9 text-right mb-3 d-none d-md-block d-print-none">
                 <a href="#provider" class="btn btn-primary"><img src="images/icons/provider.png" class="img-fluid" width="18" alt="Provider">&nbsp;&nbsp;Provider</a>
                 <a href="#patient" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Patient</a>
                 <a href="#print" class="btn btn-secondary">Print</a>
             </div>
-            <div class="col-md-6 text-right mb-3 d-none d-print-block">
-                <p>For Patient</p>
+            <!-- Start Patient and Provider Information -->
+            <div class="col-md-6 text-center mb-3 d-none d-print-block">
+                <p><strong>Patient:</strong> DOE, JANE E., 12/24/2019</p>
+            </div>
+            <div class="col-md-3 text-right mb-3 d-none d-print-block">
+                <p><strong>Provider:</strong> SMITH, JOHN F. </p>
             </div>
           </div>
-          <!-- Start Patient Information -->
-          <!-- <div class="row">
-            <div class="col-md-6 mt-3 text-center text-sm-left">
-              <p><strong>Provider:</strong> SMITH, JOHN F.<br />
-                  <strong>Patient:</strong> DOE, JANE E.<br />
-                  <strong>Date:</strong> 12/13/18</p>
-            </div>
-          </div> -->
-          <!-- End Patient Information -->
+          <!-- End Patient and Provider Information -->
           <div class="row">
               <div class="col-md-12 text-center pt-2">
                   <h1>TALK TO YOUR DOCTOR ABOUT HOW YOU CAN IMPROVE YOUR HEALTH</h1>
                   <p>Start the conversation! Use the priorities below as a guide to take action to better your health.</p>
               </div>
           </div>
-          <div class="row">
-            <div class="col-md-12 mx-auto">
-              <div class="row">
-                  <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
-                      <img src="images/icons/alert_icon.png" class="img-fluid " width="30 " alt="Alert">&nbsp;Needs improvement
-                    </div>
-                    <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
-                      <img src="images/icons/warning_icon.png" class="img-fluid " width="30 " alt="Warning">&nbsp;Be aware
-                    </div>
-                    <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
-                      <img src="images/icons/success_icon.png" class="img-fluid " width="30 " alt="Success">&nbsp;Doing well
-                    </div>
-              </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-3 text-center key-border mr-1 mb-3">
+              <img src="images/icons/alert_icon.png" class="img-fluid " width="25" alt="Alert">&nbsp;Needs improvement
             </div>
+            <div class="col-sm-3 text-center key-border mr-1 mb-3">
+              <img src="images/icons/warning_icon.png" class="img-fluid " width="25 " alt="Warning">&nbsp;Be aware
+            </div>
+            <div class="col-sm-3 text-center key-border mr-1 mb-3">
+              <img src="images/icons/success_icon.png" class="img-fluid " width="25 " alt="Success">&nbsp;Doing well
+            </div>   
           </div>
           <div class="row">
               <div class="col-md-12 text-center wizard-grey py-1">
@@ -202,22 +194,99 @@
       </div>
     </div>
     <!-- End Priorities Wizard Card (Tobacco) -->
+
+    <!-- Start Priorities Wizard Card (Tobacco) -->
+    <div class="section pb-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 wizard-card-red ">
+              <div class="row">
+                <!-- Title -->
+                <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                  <!-- Icons -->
+                  <img src="images/icons/smoking.png " class="mx-auto d-block pb-3 pt-2 img-fluid " width="40 " alt="Stop Smoking ">
+                  <!-- Icons -->
+                  <p class="text-center font-weight-bold ">TOBACCO</p>
+                </div>
+                <!-- Title -->
+                <!-- Result -->
+                <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                    <!-- Icons -->
+                    <div class="pb-4 pt-2 text-center ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                    </div>
+                    <!-- <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Warning ">
+                    <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                    <!-- Icons -->
+                    <p class="text-center ">Tobacco user</p>
+                  </div>
+                  <!-- Result -->
+                <!-- Recommendations -->
+                <div class="col-12 col-md-6 pt-3">
+                  <p class="pb-1"><strong>Your Goal:</strong> Consider quitting<br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </div>
+                <!-- Recommendations -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Priorities Wizard Card (Tobacco) -->
+
+      <!-- Start Priorities Wizard Card (Tobacco) -->
+    <div class="section pb-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 wizard-card-red ">
+              <div class="row">
+                <!-- Title -->
+                <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                  <!-- Icons -->
+                  <img src="images/icons/smoking.png " class="mx-auto d-block pb-3 pt-2 img-fluid " width="40 " alt="Stop Smoking ">
+                  <!-- Icons -->
+                  <p class="text-center font-weight-bold ">TOBACCO</p>
+                </div>
+                <!-- Title -->
+                <!-- Result -->
+                <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                    <!-- Icons -->
+                    <div class="pb-4 pt-2 text-center ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                      <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                    </div>
+                    <!-- <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Warning ">
+                    <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                    <!-- Icons -->
+                    <p class="text-center ">Tobacco user</p>
+                  </div>
+                  <!-- Result -->
+                <!-- Recommendations -->
+                <div class="col-12 col-md-6 pt-3">
+                  <p class="pb-1"><strong>Your Goal:</strong> Consider quitting<br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </div>
+                <!-- Recommendations -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Priorities Wizard Card (Tobacco) -->
   
-              
-    
-      
-          
+
       <!-- Disclaimer -->
-      <div class="container">
+      <div class="container ">
         <div class="row ">
-          <div class="col-md-12 ">
             <div class="col-md-12 ">
               <p class="pt-3 text-center "><strong>Disclaimer:</strong> The CV Wizard suggestions are based on electronically available data and are not intended to be a substitute for clinical judgment. Alternative actions to those that Wizard suggest may be indicated. Exercise independent clinical judgment, review allergies, and follow product labelling instructions before choosing Wizard prescribing suggestions.</p>
             </div>
             <div class="col-md-12 ">
-              <p class="py-3 text-center ">Tell us how we are doing. Please take a quick survey to provide us feedback. <a href="# " alt="Health Partnerns Institute Survey ">www.healthpartners.com/wizardsurvey</a></p>
+              <p class="py-3 text-center ">How are you liking the Wizard tool? Please take a quick survey to provide us feedback. <a href="# " alt="Health Partnerns Institute Survey ">www.healthpartners.com/wizardsurvey</a></p>
             </div>
-          </div>
         </div>
       </div>
       <!-- Disclaimer -->

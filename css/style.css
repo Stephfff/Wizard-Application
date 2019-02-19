@@ -115,18 +115,14 @@ span.warning {
 
 
 /* Wizard Cards */
-.wizard-card {
+.wizard-card-red {
     color: #707070;
     background-color: #fff;
     min-height: 130px;
-    border-width: 0 1px 1px 1px;
+    border-width: 8px 1px 1px 1px;
     /* top right bottom left */
     border-style: solid;
-    border-color: #CCCDCF;
-}
-
-.wizard-card-title {
-    height: 8px;
+    border-color: #C42653 #CCCDCF #CCCDCF #CCCDCF;
 }
 
 .wizard-card-intro {
@@ -159,8 +155,6 @@ span.warning {
 .wizard-grey {
     background-color: #F4F4F4;
 }
-
-
 /* Wizard Cards */
 
 .footer {

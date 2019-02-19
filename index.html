@@ -35,10 +35,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#smartset" class="btn btn-primary"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="Alert">&nbsp;&nbsp;SmartSet</a>
+                        <a href="#smartset" class="btn btn-primary"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#suggestions" class="btn btn-secondary"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Alert">&nbsp;&nbsp;Suggestions</a>
+                        <a href="#suggestions" class="btn btn-secondary"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions</a>
                     </li>
                 </ul>
             </div>
@@ -74,8 +74,8 @@
                 <img src="images/wizard_logo.png" width="35" alt="Wizard"><span class="titletext">Priorities Wizard</span>
             </div>
             <div class="col-md-6 text-right mb-3 d-none d-lg-block d-print-none">
-                <a href="#provider" class="btn btn-primary"><img src="images/icons/provider.png" class="img-fluid" width="18" alt="Alert">&nbsp;&nbsp;Provider</a>
-                <a href="#patient" class="btn btn-primary"><img src="images/icons/patient.png" class="img-fluid" width="16" alt="Alert">&nbsp;&nbsp;Patient</a>
+                <a href="#provider" class="btn btn-primary"><img src="images/icons/provider.png" class="img-fluid" width="18" alt="Provider">&nbsp;&nbsp;Provider</a>
+                <a href="#patient" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Patient</a>
                 <a href="#print" class="btn btn-secondary">Print</a>
             </div>
             <div class="col-md-6 text-right mb-3 d-none d-print-block">
@@ -98,9 +98,23 @@
               </div>
           </div>
           <div class="row">
+            <div class="col-md-12 mx-auto">
+              <div class="row">
+                  <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
+                      <img src="images/icons/alert_icon.png" class="img-fluid " width="30 " alt="Alert">&nbsp;Needs improvement
+                    </div>
+                    <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
+                      <img src="images/icons/warning_icon.png" class="img-fluid " width="30 " alt="Warning">&nbsp;Be aware
+                    </div>
+                    <div class="col-md-3 text-center" style="border: 1px solid #000;padding:10px;">
+                      <img src="images/icons/success_icon.png" class="img-fluid " width="30 " alt="Success">&nbsp;Doing well
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
               <div class="col-md-12 text-center wizard-grey py-1">
-                  <img src="images/icons/cvrisk.png" class="img-fluid" width="25" alt="Cardiovascular Risk">&nbsp;<strong>Cardiovascular Risk:</strong> Your risk of having a heart attack or stroke over the next 10 years is X%. Your risk over your
-                      lifetime is X%.
+                  <img src="images/icons/cvrisk.png" class="img-fluid" width="25" alt="Cardiovascular Risk">&nbsp;<strong>Cardiovascular Risk:</strong> Your risk of having a heart attack or stroke over the next 10 years is X%. Your&nbsp;risk&nbsp;over&nbsp;your&nbsp;lifetime&nbsp;is&nbsp;X%.
               </div>
           </div>
       </div>
@@ -151,15 +165,8 @@
     <!-- Start Priorities Wizard Card (Tobacco) -->
     <div class="section pb-2">
       <div class="container">
-        <div class="row ">
-          <!-- Card Title -->
-          <div class="col-md-12 wizard-card-title wizard-red">
-            &nbsp;
-          </div>
-          <!-- Card Title -->
-        </div>
         <div class="row">
-          <div class="col-sm-12 wizard-card ">
+          <div class="col-sm-12 wizard-card-red ">
             <div class="row">
               <!-- Title -->
               <div class="col-6 col-md-3 pt-3 wizard-card-intro">

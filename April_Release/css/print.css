@@ -25,10 +25,9 @@
   span.numbers {
     color: #000000;
   }
+  /*Removing Header and footer from print page*/
+  @page { margin: 0; }
+  body { margin: 1.6cm; }
   
   .page-break { display: block; page-break-before: always; }
 }
-
-/*@media all {
-  .page-break { display: none; }
-}*/ 

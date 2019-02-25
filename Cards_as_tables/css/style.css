@@ -152,64 +152,34 @@ span.numbers {
 
 
 /* Wizard Cards */
-.wizard-card-red {
+table {
     color: #707070;
     background-color: #fff;
     min-height: 130px;
     border-width: 8px 1px 1px 1px;
     /* top right bottom left */
     border-style: solid;
+}
+
+.wizard-card-red {
     border-color: #C42653 #CCCDCF #CCCDCF #CCCDCF;
 }
 
 .wizard-card-yellow {
-    color: #707070;
-    background-color: #fff;
-    min-height: 130px;
-    border-width: 8px 1px 1px 1px;
-    /* top right bottom left */
-    border-style: solid;
     border-color: #E9AD32 #CCCDCF #CCCDCF #CCCDCF;
 }
 
 .wizard-card-green {
-    color: #707070;
-    background-color: #fff;
-    min-height: 130px;
-    border-width: 8px 1px 1px 1px;
-    /* top right bottom left */
-    border-style: solid;
     border-color: #009B49 #CCCDCF #CCCDCF #CCCDCF;
 }
 
 .wizard-card-blue {
-    color: #707070;
-    background-color: #fff;
-    min-height: 130px;
-    border-width: 8px 1px 1px 1px;
-    /* top right bottom left */
-    border-style: solid;
     border-color: #159BD7 #CCCDCF #CCCDCF #CCCDCF;
 }
 
 .wizard-card-grey {
     background-color: #F5F5F5;
-    border-width: 0 0 1px 1px;
-    /* top right bottom left */
-    border-style: solid;
-    border-color: #CCCDCF;
-}
-
-.wizard-card-white {
-    background-color: #FFFFFF;
-    border-width: 0 0 1px 1px;
-    /* top right bottom left */
-    border-style: solid;
-    border-color: #CCCDCF;
-}
-
-.wizard-card-intro {
-    border-width: 0 0 1px 0;
+    border-width: 0 1px 1px 1px;
     /* top right bottom left */
     border-style: solid;
     border-color: #CCCDCF;

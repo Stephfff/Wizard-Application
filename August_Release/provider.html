@@ -78,8 +78,19 @@
                      width="18" alt="Patient">&nbsp;&nbsp;Patient</a>
                   <a href="#provider" class="btn btn-primary disabled"><img src="images/icons/provider_nonactive.png"
                      class="img-fluid" width="16" alt="Provider">&nbsp;&nbsp;Provider</a>
-                  <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png"
-                     class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                  <!--Print Button-->
+                  <div class="btn-group">
+                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print
+                     </button>
+                     <div class="dropdown-menu">
+                       <button class="dropdown-item" type="button">Single Sided</button>
+                       <button class="dropdown-item" type="button">Double Sided</button>
+                     </div>
+                   </div>
+                   <!--Print Button-->
+                     <!-- <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png"
+                     class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button> -->
                </div>
                <!-- Start Patient and Provider Information -->
                <div class="col-md-6 text-center mb-3 d-none d-print-block">

@@ -132,22 +132,6 @@ ul {
 }
 /* BUTTONS */
 
-/* Numbers */
-span.numbers {
-    background: #707070;;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin-right: 10px;
-    text-align: center;
-    width: 1.6em;
-}
-/* Numbers */
-
 /* COMMON ELEMENTS */
 
 
@@ -159,6 +143,13 @@ table {
     border-width: 8px 1px 1px 1px;
     /* top right bottom left */
     border-style: solid;
+}
+
+table.labs {
+    color: ffffff;
+    background-color: #fff;
+    min-height: 130px;
+    border: none;
 }
 
 .wizard-card-red {
@@ -179,6 +170,13 @@ table {
 
 .wizard-card-grey {
     background-color: #F5F5F5;
+    border-width: 0 1px 1px 1px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+.wizard-card-white {
+    background-color: #FFFFFF;
     border-width: 0 1px 1px 1px;
     /* top right bottom left */
     border-style: solid;

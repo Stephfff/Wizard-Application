@@ -1,8 +1,13 @@
- @media print {
-
-  /*Removing Header and footer from print page*/
-  @page { margin: 0; }
-  body { margin: 1.6cm; padding:0; }
-  
-  .page-break { display: block; page-break-before: always; }
+@media all {
+  /* Ensures that the page-break is never seen visually */
+	.page-break	{ display: none; }
 }
+
+@media print {
+  body { margin: 0; padding:0; }
+  
+  /* Ensures that the page break is seen by the printer */
+  .page-break	{ 
+    display: block; page-break-before: always; 
+  }
+} 

@@ -16,29 +16,32 @@
       <link href="css/print.css" rel="stylesheet">
    </head>
    <body>
+    
+      <!-- Tab panes -->
+      <div class="tab-content">
+         <div class="tab-pane container active" id="patientpriorities">
       <!-- Start Priorities Wizard Header -->
       <header class="pt-4 pb-2">
          <div class="container">
             <div class="row">
                <div class="col-md-3">
                   <img src="images/wizard_logo.png" width="35" alt="Priority Wizard"><span class="titletext">Priority
-                  Wizard</span>
+                  Wizard<sup>&copy;</sup></span>
                </div>
                <div class="col-md-9 text-right mb-3 d-none d-md-block d-print-none">
-                  <a href="patient.html" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid"
-                     width="18" alt="Patient">&nbsp;&nbsp;Patient</a>
                   <a href="#provider" class="btn btn-primary disabled"><img src="images/icons/provider_nonactive.png"
                      class="img-fluid" width="16" alt="Provider">&nbsp;&nbsp;Provider</a>
-                  <a href="#suggestions" class="btn btn-secondary"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions</a>
-                  <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png"
-                     class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                  <a href="patient.html" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid"
+                     width="18" alt="Patient">&nbsp;&nbsp;Patient</a>
+                 <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png"
+                  class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
                </div>
                <!-- Start Patient and Provider Information -->
                <div class="col-md-6 text-center mb-3 d-none d-print-block">
-                  <p><strong>Patient:</strong> DOE, JANE E., 12/24/2019</p>
+                  <p><strong>Patient:</strong> DOE, JANE E.&nbsp;&nbsp;<strong>Age:</strong> 49&nbsp;&nbsp;<strong>Date:</strong>12/24/18</p>
                </div>
                <div class="col-md-3 text-right mb-3 d-none d-print-block">
-                  <p><strong>Provider:</strong> SMITH, JOHN F. </p>
+                  <p><strong>Provider:</strong> SMITH, JOHN F.</p>
                </div>
             </div>
             <!-- End Patient and Provider Information -->
@@ -66,7 +69,7 @@
                   <div class="row">
                      <!-- Title -->
                      <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase"><span class="numbers">1</span>Tobacco</p>
+                        <p class="text-center font-weight-bold text-uppercase">Tobacco</p>
                         <!-- Icons -->
                         <img src="images/icons/smoking.png " class="mx-auto d-block pb-3 img-fluid " width="40 "
                            alt="Stop Smoking ">
@@ -102,7 +105,7 @@
                   <div class="row">
                      <!-- Title -->
                      <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase"><span class="numbers">2</span>Lipids</p>
+                        <p class="text-center font-weight-bold text-uppercase">Lipids</p>
                         <!-- Icons -->
                         <img src="images/icons/cholesterol.png " class="mx-auto d-block pb-3 img-fluid " width="40 "
                            alt="Cholesterol ">
@@ -169,7 +172,7 @@
                   <div class="row">
                      <!-- Title -->
                      <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase"><span class="numbers">3</span>Blood Pressure</p>
+                        <p class="text-center font-weight-bold text-uppercase">Blood Pressure</p>
                         <!-- Icons -->
                         <img src="images/icons/bloodpressure.png " class="mx-auto d-block pb-3 img-fluid " width="40 "
                            alt="Blood Pressure ">
@@ -211,9 +214,10 @@
                      <!-- Result -->
                      <!-- Recommendations -->
                      <div class="col-12 col-md-6 pt-3">
-                        <p class="mb-1"><strong>Goal:</strong> Ideal BP < 120/80</p>
+                        <!-- <p class="mb-1"><strong>Goal:</strong> Ideal BP < 120/80</p> -->
                         <p class="font-weight-bold mb-1">Treatment Considerations</p>
                         <ul class="mb-1">
+                           <li>Ideal BP < 120/80</li>
                            <li>A blood pressure reading in the last year is not found</li>
                            <li>A potassium test (K) is often recommended yearly for people taking hypertension medications</li>
                            <li>A kidney function test (Cr/GFR) is often recommended yearly for people taking hypertension medications</li>
@@ -232,7 +236,7 @@
                   <div class="row">
                      <!-- Title -->
                      <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase"><span class="numbers">4</span>Glycemic Control</p>
+                        <p class="text-center font-weight-bold text-uppercase">Glycemic Control</p>
                         <!-- Icons -->
                         <img src="images/icons/bloodsugar.png " class="mx-auto d-block pb-3 img-fluid " width="25 "
                            alt="Glycemic Control ">
@@ -301,7 +305,7 @@
                   <div class="row">
                      <!-- Title -->
                      <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase"><span class="numbers">5</span>BMI (Weight)</p>
+                        <p class="text-center font-weight-bold text-uppercase">BMI (Weight)</p>
                         <!-- Icons -->
                         <img src="images/icons/weight.png " class="mx-auto d-block pb-3 img-fluid " width="35 "
                            alt="Weight ">
@@ -482,16 +486,15 @@
                <div class="col-sm-12 wizard-card-blue ">
                   <div class="row">
                      <!-- Title -->
-                     <div class="col-6 col-md-3 pt-3 wizard-card-intro">
-                        <p class="text-center font-weight-bold text-uppercase">OTHER RELEVANT INFORMATION AND RECOMMENDATIONS</p>
-                        <!-- Icons -->
-                        <img src="images/icons/info_icon.png" class="mx-auto d-block pb-3 img-fluid " width="25 "
-                           alt="Other Information ">
-                        <!-- Icons -->
+                     <div class="col-12 py-2 wizard-card-relevant">
+                           <img src="images/icons/info_icon.png" class="img-fluid " width="25 "
+                           alt="Other Information ">&nbsp;&nbsp;<span class="font-weight-bold">RELEVANT INFORMATION AND RECOMMENDATIONS</span>
                      </div>
+                  </div>
+                  <div class="row">
                      <!-- Title -->
                      <!-- Result -->
-                     <div class="col-6 col-md-3 wizard-card-white pt-3">
+                     <div class="col-6 col-md-3 wizard-card-info pt-3">
                         <table class="table table-sm">
                            <tbody>
                               <tr>
@@ -526,7 +529,7 @@
                      </div>
                      <!-- Result -->
                      <!-- Recommendations -->
-                     <div class="col-12 col-md-6 pt-3">
+                     <div class="col-9 col-md-9 pt-3">
                         <p class="font-weight-bold mb-1">Aspirin</p>
                         <ul class="mb-1">
                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
@@ -540,7 +543,7 @@
                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
                         </ul>
                         <p class="font-weight-bold mb-1">Blood Pressure</p>
-                        <ul class="mb-1 pb-1">
+                        <ul class="mb-1 pb-3">
                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
                         </ul>
                      </div>
@@ -549,8 +552,22 @@
                </div>
             </div>
          </div>
-         <!-- End Priorities Wizard Card (Cancer Prevention) -->
+         <!-- End Priorities Wizard Card (OTHER RELEVANT INFORMATION AND RECOMMENDATIONS) -->
+         <!-- Disclaimer -->
+         <div class="container ">
+            <div class="row ">
+               <div class="col-md-12 wizard-grey">
+                  <p class="pt-3 text-center "><strong>Disclaimer:</strong> The Priority Wizard<sup>&copy;</sup> suggestions are based on electronically available data and are not intended to be a substitute for clinical judgment. Alternative actions to those that the Priority Wizard<sup>&copy;</sup> suggest may be indicated. Exercise independent clinical judgment, review allergies, and follow product labelling instructions before choosing Wizard prescribing suggestions.</p>
+               </div>
+            </div>
+         </div>
+         <!-- Disclaimer -->
       </section>
+   </div>
+   <div class="tab-pane container fade" id="diseasespecificcds">Disease Specific CDS</div>
+   <div class="tab-pane container fade" id="medicationadherence">Medication Adherence</div>
+   <div class="tab-pane container fade" id="cancerprevention">Cancer Prevention</div>
+</div>
       <footer class="footer d-md-block d-print-none ">
          <div class="container ">
             <p class="text-center mt-3 ">2019 &copy; HealthPartners</p>

@@ -1,26 +1,4 @@
  @media print {
-  /* Wizard Cards */
-  .wizard-card {
-    border-color: #000000;
-  }
-  .wizard-card-title {
-    border: 1px solid #000000;
-  }
-  .wizard-card-result {
-    border-color: #000000;
-  }
-  .wizard-card-goal {
-    border-color: #000000;
-  }
-  /* Wizard Cards */ 
-
-  .main-content {
-    margin-top: -180px;
-  } 
-
-  h1 {
-    color: #000000;
-  }
 
   /*Removing Header and footer from print page*/
   @page { margin: 0; }

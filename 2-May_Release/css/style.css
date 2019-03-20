@@ -10,7 +10,7 @@ html {
 /* COMMON ELEMENTS */
 body {
     background-color: #ffffff;
-    color: #707070;
+    color: #333333;
     font-size: 16px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
     margin-bottom: 60px;
@@ -26,13 +26,11 @@ a:hover {
 
 h1 {
     font-size: 20px;
-    color: #707070;
     font-weight: bold;
 }
 
 span.titletext {
     font-family: 'Cinzel', serif;
-    color: #455E6D;
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -132,28 +130,11 @@ ul {
 }
 /* BUTTONS */
 
-/* Numbers 
-span.numbers {
-    background: #707070;;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin-right: 10px;
-    text-align: center;
-    width: 1.6em;
-}
-/* Numbers */
-
 /* COMMON ELEMENTS */
 
 
 /* Wizard Cards */
 .wizard-card-red {
-    color: #707070;
     background-color: #fff;
     min-height: 130px;
     border-width: 8px 1px 1px 1px;
@@ -163,7 +144,6 @@ span.numbers {
 }
 
 .wizard-card-yellow {
-    color: #707070;
     background-color: #fff;
     min-height: 130px;
     border-width: 8px 1px 1px 1px;
@@ -173,7 +153,6 @@ span.numbers {
 }
 
 .wizard-card-green {
-    color: #707070;
     background-color: #fff;
     min-height: 130px;
     border-width: 8px 1px 1px 1px;
@@ -183,7 +162,6 @@ span.numbers {
 }
 
 .wizard-card-blue {
-    color: #707070;
     background-color: #fff;
     min-height: 130px;
     border-width: 8px 1px 1px 1px;

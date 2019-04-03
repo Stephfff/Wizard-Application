@@ -133,7 +133,7 @@ ul {
 /* COMMON ELEMENTS */
 
 
-/* Wizard Cards */
+/* Patient Version Wizard Cards */
 .wizard-card-red {
     background-color: #fff;
     min-height: 130px;
@@ -210,7 +210,26 @@ ul {
 .wizard-grey {
     background-color: #F4F4F4;
 }
-/* Wizard Cards */
+/* Patient Version Wizard Cards */
+
+/* Provider Version Wizard Cards */
+.provider-red {
+    min-height: 150px;
+    border-width: 1px 1px 1px 8px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF #CCCDCF #CCCDCF #C42653;
+}
+
+.provider-yellow {
+    
+}
+
+.provider-green {
+    
+}
+
+/* Provider Version Wizard Cards */
 
 .footer {
     position: absolute;

@@ -213,8 +213,59 @@ ul {
 /* Patient Version Wizard Cards */
 
 /* Provider Version Wizard Cards */
+.provider-header-red {
+    background-color: #C42653; 
+    color: #ffffff; 
+    padding: 8px 20px 9px 7px; 
+    font-weight: bold;border-radius: 0 15px 15px 0;
+}
+
+.provider-header-yellow {
+    background-color: #E9AD32; 
+    color: #ffffff; 
+    padding: 8px 20px 9px 7px; 
+    font-weight: bold;border-radius: 0 15px 15px 0;
+}
+
+.provider-header-green {
+    background-color: #009B49; 
+    color: #ffffff; 
+    padding: 8px 20px 9px 7px; 
+    font-weight: bold;border-radius: 0 15px 15px 0;
+}
+
+.provider-header-blue {
+    background-color: #159BD7; 
+    color: #ffffff; 
+    padding: 8px 20px 9px 7px; 
+    font-weight: bold;border-radius: 0 15px 15px 0;
+}
+
+table {
+   margin-bottom: 0rem !important; 
+   font-size: 12px;
+}
+
+.provider-margin {
+    margin-left: -7px;
+}
+
+.wizard-card-results {
+    border-width: 1px 1px 0 0;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+
+.wizard-card-medications {
+    border-width: 1px 0 0 0;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF;
+}
+
 .provider-red {
-    min-height: 150px;
+    min-height: 120px;
     border-width: 1px 1px 1px 8px;
     /* top right bottom left */
     border-style: solid;
@@ -222,11 +273,27 @@ ul {
 }
 
 .provider-yellow {
-    
+    min-height: 120px;
+    border-width: 1px 1px 1px 8px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF #CCCDCF #CCCDCF #E9AD32;
 }
 
 .provider-green {
-    
+    min-height: 120px;
+    border-width: 1px 1px 1px 8px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF #CCCDCF #CCCDCF #009B49;;
+}
+
+.provider-blue {
+    min-height: 120px;
+    border-width: 1px 1px 1px 8px;
+    /* top right bottom left */
+    border-style: solid;
+    border-color: #CCCDCF #CCCDCF #CCCDCF #159BD7;
 }
 
 /* Provider Version Wizard Cards */
@@ -256,8 +323,12 @@ ul {
 
 /*Large devices (desktops, 992px and up)*/
 
-@media (min-width: 992px) {}
-
+@media (min-width: 992px) {
+    table {
+        font-size: 16px;
+    }
+}
+    
 
 /*Medium devices (tablets, 768px and up)*/
 
@@ -267,16 +338,24 @@ ul {
     }
     
     .wizard-card-grey {
-        background-color: #F5F5F5;
         border-width: 0 1px 0 1px;
         /* top right bottom left */
     }
 
     .wizard-card-white {
-        background-color: #FFFFFF;
         border-width: 0 1px 0 1px;
         /* top right bottom left */
     }
+
+    .wizard-card-results {
+        border-width: 0 1px 0 1px;
+        /* top right bottom left */
+    }
+    .wizard-card-medications {
+        border-width: 0;
+        /* top right bottom left */
+    }
+
 }
  
 

@@ -28,11 +28,14 @@
              <div class="collapse navbar-collapse" id="navbarResponsive">
                  <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                         <a href="#smartset" class="btn btn-primary"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
+                         <a href="#smartset" class="btn btn-primary mr-1"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
                      </li>
                      <li class="nav-item">
-                         <a href="#suggestions" class="btn btn-secondary"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions</a>
+                         <a href="#suggestions" class="btn btn-secondary mr-1"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions</a>
                      </li>
+                     <li class="nav-item">
+                        <a href="#FAQ" class="btn btn-secondary"><img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ</a>
+                    </li>
                  </ul>
              </div>
          </div>
@@ -44,20 +47,17 @@
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarText">
                  <!--Nav Pills-->
-                  <ul class="nav nav-pills">
-                    <li class="nav-item nav-pills-left">
-                    <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient <br />Priorities</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#diseasespecificcds">Disease <br />Specific CDS</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#medicationadherence">Medication <br />Adherence</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" data-toggle="pill" href="#cancerprevention">Cancer <br />Prevention</a>
-                    </li>
-                 </ul>
+                 <ul class="nav nav-pills">
+                  <li class="nav-item nav-pills-left">
+                  <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient <br />Priorities</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#diseasespecificcds">Mayo Statin<br /> Tool</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#medicationadherence">Medication <br />Adherence</a>
+                  </li> -->
+               </ul>
             </div>
           </nav>
           <!-- Subnav Tabs -->
@@ -79,18 +79,8 @@
                   <a href="#provider" class="btn btn-primary disabled"><img src="images/icons/provider_nonactive.png"
                      class="img-fluid" width="16" alt="Provider">&nbsp;&nbsp;Provider</a>
                   <!--Print Button-->
-                  <div class="btn-group pl-1">
-                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print
-                     </button>
-                     <div class="dropdown-menu">
-                       <button class="dropdown-item" type="button">Single Sided</button>
-                       <button class="dropdown-item" type="button">Double Sided</button>
-                     </div>
-                   </div>
-                   <!--Print Button-->
-                     <!-- <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png"
-                     class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button> -->
+                   <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                  <!--Print Button-->
                </div>
                <!-- Start Patient and Provider Information -->
                <div class="col-md-6 text-center mb-3 d-none d-print-block">

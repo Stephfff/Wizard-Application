@@ -30,18 +30,109 @@
                   <li class="nav-item">
                       <a href="#smartset" class="btn btn-primary mr-1"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
                   </li>
-                  <li class="nav-item">
-                      <a href="#suggestions" class="btn btn-secondary mr-1"><img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions</a>
-                  </li>
-                  <li class="nav-item">
-                     <a href="#FAQ" class="btn btn-secondary"><img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ</a>
-                 </li>
+                  <button type="button" class="btn btn-secondary mr-1" data-toggle="modal" data-target="#SuggestionsModal">
+                        <img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions
+                   </button>
+                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#FAQModal">
+                     <img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ
+                </button>
               </ul>
              </div>
          </div>
      </nav>
      <!-- Navigation -->
- 
+
+   <!-- FAQ Modal -->
+   <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="FAQModalTitle">Wizard FAQ's</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <h2>Why wasn't Priority Wizard recommended for my patient? </h2> 
+            <p>Wizard Tools are not available for patients over age 75 because care for this age group requires a greater degree of clinical judgment and individualization.  Wizard Tools online can only be used for patients age 18-75. If the rooming nurse did not get a BPA it might mean:</p>
+
+            <h2>How do I know what clinical issues on the list are most important?</h2>
+            <p>The clinical issues are listed in order of priority, with the ones giving greatest benefit at the top.  Keep in mind, the conditions listed on the patient version with check marks and “keep up the good work” messages are meant only for positive reinforcement to patients and do not need to be addressed at the visit.</p>
+
+            <h2>What happened to the 10-year ASCVD risk score on the patient version?</h2> 
+            <p>The score was removed from the patient version because patients told us in focus groups and through MY VOICE that they did not understand the score and it frightened some of them.  The risk score is still available on the “provider version” which can be shared with appropriate patients at the discretion of the provider along with an opportunity for questions to be answered.</p>
+
+            <h2>How do I give feedback or suggestions about Priority Wizard? </h2>
+            <p>We have already great feedback and many great suggestions through the “suggestions” tab that providers access through Wizard Tools within the visit navigator. We are also actively conducting provider interviews.  All feedback we receive is being tracked and analyzed.  Changes to Priority Wizard to incorporate learnings will be released on June 19.  In the meantime, keep your comments and suggestions coming!</p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+      </div>
+   </div>
+   <!-- FAQ Modal -->
+
+   <!-- Suggestions Modal -->
+   <div class="modal fade" id="SuggestionsModal" tabindex="-1" role="dialog" aria-labelledby="SuggestionsModal" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="SuggestionsModalTitle">We'd Like Your Feedback!</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+                  <form>
+                        <div class="form-group">
+                           <label for="exampleFormControlInput1">Name</label>
+                           <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">I am a...</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Physician Provider</option>
+                            <option>Advanced Practice Provider</option>
+                            <option>RN</option>
+                            <option>LPN, CMA/RMA</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Suggestions</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-primary">
+                              Mayo Statin Tool is missing
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary">
+                              Labs are wrong
+                         </button><br />
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              Medications are wrong
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              Recommedations are wrong
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              I don't like the new design
+                         </button>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </div>
+         </div>
+         </div>
+      </div>
+      <!-- Suggestions Modal -->
+
+
      <!-- Subnav Tabs -->
      <nav class="navbar-expand-lg subnav">
        <div class="container">

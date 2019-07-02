@@ -1,0 +1,13 @@
+@media all {
+  /* Ensures that the page-break is never seen visually */
+	.page-break	{ display: none; }
+}
+
+@media print {
+  body { margin: 0; padding:0; }
+  
+  /* Ensures that the page break is seen by the printer */
+  .page-break	{ 
+    display: block; page-break-before: always; 
+  }
+} 

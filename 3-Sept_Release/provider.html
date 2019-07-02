@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Wizard</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom Style Sheet -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- For Print Styles -->
+      <link href="css/print.css" rel="stylesheet">
+   </head>
+   <body>
+       <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+         <div class="container">
+             <a class="navbar-brand" href="#"><img src="images/wizard_logo.png" width="30" alt="Wizard"><span class="titletext">Wizard<sup>&copy;</sup></span>
+                 <span class="sr-only">(current)</span>
+             </a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+             <div class="collapse navbar-collapse" id="navbarResponsive">
+                 <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                         <a href="#smartset" class="btn btn-primary mr-1"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
+                     </li>
+                     <button type="button" class="btn btn-secondary mr-1" data-toggle="modal" data-target="#SuggestionsModal">
+                        <img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions
+                   </button>
+                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#FAQModal">
+                           <img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ
+                     </button>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+     <!-- Navigation -->
+
+     <!-- FAQ Modal -->
+   <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModal" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="FAQModalTitle">Wizard FAQ's</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <h2>Why wasn't Priority Wizard recommended for my patient? </h2> 
+               <p>Wizard Tools are not available for patients over age 75 because care for this age group requires a greater degree of clinical judgment and individualization.  Wizard Tools online can only be used for patients age 18-75. If the rooming nurse did not get a BPA it might mean:</p>
+   
+               <h2>How do I know what clinical issues on the list are most important?</h2>
+               <p>The clinical issues are listed in order of priority, with the ones giving greatest benefit at the top.  Keep in mind, the conditions listed on the patient version with check marks and “keep up the good work” messages are meant only for positive reinforcement to patients and do not need to be addressed at the visit.</p>
+   
+               <h2>What happened to the 10-year ASCVD risk score on the patient version?</h2> 
+               <p>The score was removed from the patient version because patients told us in focus groups and through MY VOICE that they did not understand the score and it frightened some of them.  The risk score is still available on the “provider version” which can be shared with appropriate patients at the discretion of the provider along with an opportunity for questions to be answered.</p>
+   
+               <h2>How do I give feedback or suggestions about Priority Wizard? </h2>
+               <p>We have already great feedback and many great suggestions through the “suggestions” tab that providers access through Wizard Tools within the visit navigator. We are also actively conducting provider interviews.  All feedback we receive is being tracked and analyzed.  Changes to Priority Wizard to incorporate learnings will be released on June 19.  In the meantime, keep your comments and suggestions coming!</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+         </div>
+      </div>
+      <!-- FAQ Modal -->
+
+      <!-- Subnav Tabs -->
+      <nav class="navbar-expand-lg subnav">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarText">
+                 <!--Nav Pills-->
+                 <ul class="nav nav-pills">
+                  <li class="nav-item nav-pills-left">
+                  <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient <br />Priorities</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#mayostatintool">Mayo Statin<br /> Tool</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#medicationadherence">Medication <br />Adherence</a>
+                  </li> -->
+               </ul>
+            </div>
+          </nav>
+          <!-- Subnav Tabs -->
+     
+      <!-- Tab panes -->
+      <div class="tab-content">
+         <div class="tab-pane container active" id="patientpriorities">
+      <!-- Start Priorities Wizard Header -->
+      <header class="pt-4 pb-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <img src="images/wizard_logo.png" width="35" alt="Priority Wizard"><span class="titletext">Priority
+                  Wizard<sup>&copy;</sup></span>
+               </div>
+               <div class="col-md-9 text-right mb-3 d-none d-md-block d-print-none">
+                  <a href="patient.html" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid"
+                     width="18" alt="Patient">&nbsp;&nbsp;Patient</a>
+                  <a href="#provider" class="btn btn-primary disabled"><img src="images/icons/provider_nonactive.png"
+                     class="img-fluid" width="16" alt="Provider">&nbsp;&nbsp;Provider</a>
+                  <!--Print Button-->
+                   <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                  <!--Print Button-->
+               </div>
+               <!-- Start Patient and Provider Information -->
+               <div class="col-md-6 text-center mb-3 d-none d-print-block">
+                  <p><strong>Patient:</strong> DOE, JANE E.&nbsp;&nbsp;<strong>Age:</strong> 49&nbsp;&nbsp;<strong>Date:</strong>12/24/18</p>
+               </div>
+               <div class="col-md-3 text-right mb-3 d-none d-print-block">
+                  <p><strong>Provider:</strong> SMITH, JOHN F.</p>
+               </div>
+            </div>
+            <!-- End Patient and Provider Information -->
+            <div class="row">
+               <div class="col-md-12 pt-3 pb-2">
+                  <img src="images/icons/conditions.png" class="img-fluid" width="25"
+                     alt="Conditions">&nbsp;<strong>Conditions:</strong> Diabetes, Hyperlipidemia, Hypertension
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12 wizard-grey py-1">
+                  <img src="images/icons/cvrisk.png" class="img-fluid" width="25"
+                     alt="Cardiovascular Risk">&nbsp;<strong>Cardiovascular Risk:</strong> Risk of having a heart attack or
+                  stroke over the next 10 years is X%. Risk over your lifetime is X%.
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- End Priorities Wizard Header -->
+      <section class="pb-5">
+         <!-- Start Priorities Wizard Card (Tobacco) -->
+         <div class="container pb-1">
+            <div class="row">
+               <div class="col-sm-12 provider-red">
+                  <div class="row">
+                     <!-- Recommendations -->
+                     <div class="col-12 col-md-6 px-0">
+                        <p class="pt-1 mb-2 provider-margin">
+                           <span class="provider-header-red text-uppercase">&nbsp;Tobacco</span><span style="color: #C42653;">&nbsp;&nbsp;CV Risk from 7% to 5%
+                           </span>
+                        </p>
+                        <div class="px-2">
+                           <ul class="pl-4 py-2">
+                              <li>Tobacco use is identified. Assess readiness and consider varenicline (Chantix), bupropion (Zyban) or nicotine patch, gum, lozenge, or inhaler. Consider referring to MTM for smoking cessation counseling.
+                              </li>
+                           </ul>
+                        </div>
+                       
+                     </div>
+                     <!-- Recommendations -->
+                     <!-- Results -->
+                     <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                        <p class="text-center pt-5">Tobacco Use: YES</p>
+                     </div>
+                     <!-- Results -->
+                     <!-- Medications -->
+                     <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                        <p class="text-center pt-5">No Medications</p>
+                     </div>
+                     <!-- Medications -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Priorities Wizard Card (Tobacco) -->
+
+         <!-- Start Priorities Wizard Card (Lipids) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-red">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-red text-uppercase">&nbsp;Lipids</span><span style="color: #C42653;">&nbsp;&nbsp;CV Risk from 7% to 5%
+                              </span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li><strong>Goal:</strong> Consider intensifying statin therapy</li>
+                                 <li>Statin initiation or intensification is recommended due to diabetes and CV risk. Many experts recommend high intensity statin doses for CV risk > 7.5%
+                                 </li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <table class="table table-sm mx-auto">
+                              <tr>
+                                 <td>LDL (mg/dl)</td>
+                                 <td>93</td>
+                                 <td>12/23/2019</td>
+                              </tr>
+                              <tr>
+                                 <td>HDL (mg/dl)</td>
+                                 <td>46</td>
+                                 <td>12/23/2019</td>
+                              </tr>
+                              <tr>
+                                 <td>TRIG (mg/dl)</td>
+                                 <td>127</td>
+                                 <td>12/23/2019</td>
+                              </tr>
+                              <tr>
+                                 <td>TC (mg/dl)</td>
+                                 <td>164</td>
+                                 <td>12/23/2019</td>
+                              </tr>
+                              <tr>
+                                 <td>LDL (mg/dl)</td>
+                                 <td>93</td>
+                                 <td>12/23/2019</td>
+                              </tr>
+                           </table>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <ul class="pb-1 list-unstyled text-center">
+                              <li>Atorvastatin Calcium Tab 20 MG</li>
+                           </ul>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Lipids) -->
+
+         <!-- Start Priorities Wizard Card (Blood Pressure) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-red">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-red text-uppercase">&nbsp;Blood Pressure</span><span style="color: #C42653;">&nbsp;&nbsp;CV Risk from 7% to 5%
+                              </span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Ideal BP < 120/80</li>
+                                 <li>A blood pressure reading in the last year is not found</li>
+                                 <li>A potassium test (K) is often recommended yearly for people taking hypertension medications</li>
+                                 <li>A kidney function test (Cr/GFR) is often recommended yearly for people taking hypertension medications</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <table class="table table-sm mx-auto">
+                              <tr>
+                                    <td>BP (mm Hg)</td>
+                                    <td>128/88</td>
+                                    <td>2/15/19</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Last BP (mm Hg)</td>
+                                    <td>132/86</td>
+                                    <td>1/07/19</td>
+                                 </tr>
+                                 <tr>
+                                    <td>eGFR (ml/min)</td>
+                                    <td>60</td>
+                                    <td>2/15/19</td>
+                                 </tr>
+                                 <tr>
+                                    <td>K (mmol/L)</td>
+                                    <td>3.6</td>
+                                    <td>2/15/19</td>
+                                 </tr>
+                           </table>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <ul class="pb-1 list-unstyled text-center">
+                              <li>Hydrochlorothiazide</li>
+                           </ul>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Blood Pressure) -->
+
+            <!-- Start Priorities Wizard Card (Glycemic Control) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-red">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-red text-uppercase">&nbsp;Glycemic Control</span><span style="color: #C42653;">&nbsp;&nbsp;CV Risk from 7% to 5%
+                              </span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Blood glucose tests are suggestive of diabetes. Consider further evaluation and document diabetes on the problem list if indicated</li>
+                                 <li>Annual kidney function tests(GFR) are recommended for metformin use</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <table class="table table-sm mx-auto">
+                              <tr>
+                                 <td>A1c (%)</td>
+                                 <td>8</td>
+                                 <td>2/15/19</td>
+                              </tr>
+                              <tr>
+                                 <td>Cr (mg/dl)</td>
+                                 <td>0.9</td>
+                                 <td>1/07/19</td>
+                              </tr>
+                              <tr>
+                                 <td>eGFR (ml/min)</td>
+                                 <td>60</td>
+                                 <td>2/15/19</td>
+                              </tr>
+                              <tr>
+                                 <td>GLUCOSE (mg/dl)</td>
+                                 <td>189</td>
+                                 <td>2/15/19</td>
+                              </tr>
+                           </table>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <ul class="pb-1 list-unstyled text-center">
+                                 <li>Liraglutide Soln Pen-Injector 
+                                    18 MG/3ML (6MG/ML)</li>
+                                 <li>Metformin HCI Tab 500 MG</li>
+                           </ul>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Glycemic Control) -->
+         
+             <!-- Start Priorities Wizard Card (BMI (Weight)) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-red">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-red text-uppercase">&nbsp;BMI (Weight)</span><span style="color: #C42653;">&nbsp;&nbsp;CV Risk from 7% to 5%
+                              </span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Discuss advantages of reducing weight by 10-20 lbs. Potential actions are listed on patient interface.</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <p class="text-center pt-5">BMI: 31.3</p>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <p class="text-center pt-5">No Medications</p>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (BMI (Weight)) -->
+
+            <!-- Start Priorities Wizard Card (ASPIRIN OR BLOOD THINNERS) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-yellow">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-yellow text-uppercase">&nbsp;ASPIRIN OR BLOOD THINNERS</span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (ASPIRIN OR BLOOD THINNERS) -->
+
+             <!-- Start Priorities Wizard Card (CKD) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-yellow">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-yellow text-uppercase">&nbsp;Chronic Kidney Disease</span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (CKD) -->
+
+            <!-- Start Priorities Wizard Card (Opioid) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-yellow">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-yellow text-uppercase">&nbsp;OPIOID USE</span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Opioid) -->
+
+             <!-- Start Priorities Wizard Card (Cancer) -->
+         <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 provider-green">
+                     <div class="row">
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 px-0">
+                           <p class="pt-1 mb-2 provider-margin">
+                              <span class="provider-header-green text-uppercase">&nbsp;Cancer Prevention</span>
+                           </p>
+                           <div class="px-2">
+                              <ul class="pl-4 py-2">
+                                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              </ul>
+                           </div>
+ 
+                        </div>
+                        <!-- Recommendations -->
+                        <!-- Results -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Results -->
+                        <!-- Medications -->
+                        <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                           <p class="text-center pt-5">Lorem ipsum</p>
+                        </div>
+                        <!-- Medications -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Cancer) -->
+         
+      <!-- Start Priorities Wizard Card (OTHER RELEVANT INFORMATION AND RECOMMENDATIONS) -->
+      <div class="container pb-1">
+            <div class="row">
+               <div class="col-sm-12 provider-blue">
+                  <div class="row">
+                     <!-- Recommendations -->
+                     <div class="col-12 col-md-6 px-0">
+                        <p class="pt-1 mb-2 provider-margin">
+                           <span class="provider-header-blue text-uppercase">&nbsp;RELEVANT INFORMATION AND RECOMMENDATIONS</span>
+                        </p>
+                        <div class="px-2">
+                           <ul class="pl-4 py-2">
+                              <li><span class="font-weight-bold text-uppercase">Aspirin</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              <li><span class="font-weight-bold text-uppercase">Lipids</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                              <li><span class="font-weight-bold text-uppercase">Glycemic Control</span> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</li>
+                           </ul>
+                        </div>
+
+                     </div>
+                     <!-- Recommendations -->
+                     <!-- Results -->
+                     <div class="col-6 col-md-3 pt-1 wizard-card-results">
+                        <table class="table table-sm mx-auto">
+                           <tr>
+                              <td>A1c (%)</td>
+                              <td>8</td>
+                              <td>2/15/19</td>
+                           </tr>
+                           <tr>
+                              <td>Cr (mg/dl)</td>
+                              <td>0.9</td>
+                              <td>1/07/19</td>
+                           </tr>
+                           <tr>
+                              <td>eGFR (ml/min)</td>
+                              <td>60</td>
+                              <td>2/15/19</td>
+                           </tr>
+                           <tr>
+                              <td>GLUCOSE (mg/dl)</td>
+                              <td>189</td>
+                              <td>2/15/19</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <!-- Results -->
+                     <!-- Medications -->
+                     <div class="col-6 col-md-3 pt-1 wizard-card-medications">
+                        <ul class="pb-1 list-unstyled text-center">
+                              <li>Liraglutide Soln Pen-Injector 
+                                 18 MG/3ML (6MG/ML)
+                              </li>
+                              <li>Metformin HCI Tab 500 MG</li>
+                        </ul>
+                     </div>
+                     <!-- Medications -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Priorities Wizard Card (OTHER RELEVANT INFORMATION AND RECOMMENDATIONS) -->
+         
+         <!-- Disclaimer -->
+         <div class="container ">
+            <div class="row ">
+               <div class="col-md-12 wizard-grey">
+                  <p class="pt-3 text-center "><strong>Disclaimer:</strong> The Priority Wizard<sup>&copy;</sup> suggestions are based on electronically available data and are not intended to be a substitute for clinical judgment. Alternative actions to those that the Priority Wizard<sup>&copy;</sup> suggest may be indicated. Exercise independent clinical judgment, review allergies, and follow product labelling instructions before choosing Wizard prescribing suggestions.</p>
+               </div>
+            </div>
+         </div>
+         <!-- Disclaimer -->
+      </section>
+   </div>
+   <!-- MAYO STATIN TOOL TAB-->
+   <div class="tab-pane container fade" id="mayostatintool">
+         <section class="pb-5">  
+            <div class="container">
+               <div class="row ">
+                  <div class="col-md-12 pt-4 ">
+                        <img src="images/icons/mayostatintool.png" class="img-fluid" alt="Mayo Statin Tool" >
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <!-- MAYO STATIN TOOL TAB-->
+      <!-- <div class="tab-pane container fade" id="medicationadherence">Medication Adherence</div> -->
+</div>
+ <!-- FAQ Modal -->
+ <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModal" aria-hidden="true">
+   <div class="modal-dialog modal-lg" role="document">
+   <div class="modal-content">
+      <div class="modal-header">
+         <h5 class="modal-title" id="FAQModalTitle">Wizard FAQ's</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <div class="modal-body">
+         <h2>Why wasn't Priority Wizard recommended for my patient? </h2> 
+         <p>Wizard Tools are not available for patients over age 75 because care for this age group requires a greater degree of clinical judgment and individualization.  Wizard Tools online can only be used for patients age 18-75. If the rooming nurse did not get a BPA it might mean:</p>
+
+         <h2>How do I know what clinical issues on the list are most important?</h2>
+         <p>The clinical issues are listed in order of priority, with the ones giving greatest benefit at the top.  Keep in mind, the conditions listed on the patient version with check marks and “keep up the good work” messages are meant only for positive reinforcement to patients and do not need to be addressed at the visit.</p>
+
+         <h2>What happened to the 10-year ASCVD risk score on the patient version?</h2> 
+         <p>The score was removed from the patient version because patients told us in focus groups and through MY VOICE that they did not understand the score and it frightened some of them.  The risk score is still available on the “provider version” which can be shared with appropriate patients at the discretion of the provider along with an opportunity for questions to be answered.</p>
+
+         <h2>How do I give feedback or suggestions about Priority Wizard? </h2>
+         <p>We have already great feedback and many great suggestions through the “suggestions” tab that providers access through Wizard Tools within the visit navigator. We are also actively conducting provider interviews.  All feedback we receive is being tracked and analyzed.  Changes to Priority Wizard to incorporate learnings will be released on June 19.  In the meantime, keep your comments and suggestions coming!</p>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+   </div>
+   </div>
+</div>
+<!-- FAQ Modal -->
+
+<!-- Suggestions Modal -->
+<div class="modal fade" id="SuggestionsModal" tabindex="-1" role="dialog" aria-labelledby="SuggestionsModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="SuggestionsModalTitle">We'd Like Your Feedback!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+               <form>
+                     <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleFormControlInput1">Email address</label>
+                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleFormControlSelect1">I am a...</label>
+                       <select class="form-control" id="exampleFormControlSelect1">
+                         <option>Physician Provider</option>
+                         <option>Advanced Practice Provider</option>
+                         <option>RN</option>
+                         <option>LPN, CMA/RMA</option>
+                         <option>Other</option>
+                       </select>
+                     </div>
+                     <div class="form-group">
+                       <label for="exampleFormControlTextarea1">Suggestions</label>
+                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                     </div>
+                     <button type="button" class="btn btn-sm btn-primary">
+                           Mayo Statin Tool is missing
+                      </button>
+                      <button type="button" class="btn btn-sm btn-primary">
+                           Labs are wrong
+                      </button><br />
+                      <button type="button" class="btn btn-sm btn-primary mt-2">
+                           Medications are wrong
+                      </button>
+                      <button type="button" class="btn btn-sm btn-primary mt-2">
+                           Recommedations are wrong
+                      </button>
+                      <button type="button" class="btn btn-sm btn-primary mt-2">
+                           I don't like the new design
+                      </button>
+               </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+         </div>
+      </div>
+      </div>
+   </div>
+   <!-- Suggestions Modal -->
+      <footer class="footer d-md-block d-print-none ">
+         <div class="container ">
+            <p class="text-center mt-3 ">2019 &copy; HealthPartners</p>
+         </div>
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js "></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+      <!-- Custom JavaScript -->
+      <script src="js/wizard.js"></script>
+   </body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Wizard</title>
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+      <!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom Style Sheet -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- For Print Styles -->
+      <link href="css/print.css" rel="stylesheet">
+   </head>
+   <body>
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+         <div class="container">
+             <a class="navbar-brand" href="#"><img src="images/wizard_logo.png" width="30" alt="Wizard"><span class="titletext">Wizard<sup>&copy;</sup></span>
+                 <span class="sr-only">(current)</span>
+             </a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+             <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a href="#smartset" class="btn btn-primary mr-1"><img src="images/icons/smartset.png" class="img-fluid" width="18" alt="SmartSet">&nbsp;&nbsp;SmartSet</a>
+                  </li>
+                  <button type="button" class="btn btn-secondary mr-1" data-toggle="modal" data-target="#SuggestionsModal">
+                        <img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions
+                   </button>
+                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#FAQModal">
+                     <img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ
+                </button>
+              </ul>
+             </div>
+         </div>
+     </nav>
+     <!-- Navigation -->
+
+     <!-- Subnav Tabs -->
+     <nav class="navbar-expand-lg subnav">
+       <div class="container">
+           <div class="collapse navbar-collapse" id="navbarText">
+            <!--Nav Pills-->
+             <ul class="nav nav-pills">
+               <li class="nav-item nav-pills-left">
+               <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient <br />Priorities</a>
+               </li>
+               <li class="nav-item">
+               <a class="nav-link" data-toggle="pill" href="#mayostatintool">Mayo Statin<br /> Tool</a>
+               </li>
+               <!-- <li class="nav-item">
+               <a class="nav-link" data-toggle="pill" href="#medicationadherence">Medication <br />Adherence</a>
+               </li> -->
+            </ul>
+       </div>
+     </nav>
+     <!-- Subnav Tabs -->
+
+       <!-- Tab panes -->
+      <div class="tab-content">
+         <div class="tab-pane container active" id="patientpriorities">
+            <!-- Start Priorities Wizard Header -->
+      <div class="container pt-4 pb-2">
+            <div class="row">
+               <div class="col-md-3">
+                  <img src="images/wizard_logo.png" width="35" alt="Priority Wizard"><span class="titletext">Priority Wizard<sup>&copy;</sup></span>
+               </div>
+               <div class="col-md-9 text-right mb-3 d-none d-md-block d-print-none">
+                  <a href="#patient" class="btn btn-primary disabled"><img src="images/icons/patient_nonactive.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Patient</a>
+                  <a href="provider.html" class="btn btn-primary"><img src="images/icons/provider_active.png" class="img-fluid" width="18" alt="Provider">&nbsp;&nbsp;Provider</a>
+                  <!--Print Button-->
+                  <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                   <!--Print Button-->
+               </div>
+               <!-- Start Patient and Provider Information -->
+               <div class="col-md-6 text-center mb-3 d-none d-print-block">
+                  <strong>Patient:</strong> DOE, JANE E.&nbsp;&nbsp;<strong>Date:</strong>12/24/18</p>
+               </div>
+               <div class="col-md-3 text-right mb-3 d-none d-print-block">
+                  <p><strong>Provider:</strong> SMITH, JOHN F. </p>
+               </div>
+            </div>
+            <!-- End Patient and Provider Information -->
+            <div class="row">
+               <div class="col-md-12 text-center pt-2">
+                  <h1>TALK TO YOUR DOCTOR ABOUT HOW YOU CAN IMPROVE YOUR HEALTH</h1>
+                  <p>Start the conversation! Use the priorities below as a guide to take action to better your health.</p>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-sm-3 text-center key-border mr-1 mb-3">
+                  <img src="images/icons/alert_icon.png" class="img-fluid " width="25" alt="Alert">&nbsp;High Priority
+               </div>
+               <div class="col-sm-3 text-center key-border mr-1 mb-3">
+                  <img src="images/icons/warning_icon.png" class="img-fluid " width="25 " alt="Warning">&nbsp;Needs improvement
+               </div>
+               <div class="col-sm-3 text-center key-border mr-1 mb-3">
+                  <img src="images/icons/success_icon.png" class="img-fluid " width="25 " alt="Success">&nbsp;Doing well
+               </div>
+            </div>
+            <!-- CV RISK -->
+            <!-- <div class="row">
+               <div class="col-md-12 text-center wizard-grey py-1">
+                  <strong>Cardiovascular Risk:</strong> Your risk of having a heart attack or stroke over the next 10 years is X%. Your&nbsp;risk&nbsp;over&nbsp;your&nbsp;lifetime&nbsp;is&nbsp;X%.
+               </div>
+            </div> -->
+         </div>
+         <!-- End Priorities Wizard Header -->
+         <section class="pb-5">
+            <!-- Start Priorities Wizard Card (Tobacco) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-red ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/smoking.png " class="mx-auto d-block pb-3 pt-2 img-fluid " width="40 " alt="Stop Smoking ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Tobacco</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                           </div>
+                           <!-- <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Warning ">
+                              <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                           <!-- Icons -->
+                           <p class="text-center ">Tobacco user</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Consider quitting</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Tobacco) -->
+            <!-- Start Priorities Wizard Card (Cholesterol) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-red ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/cholesterol.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="45 " alt="Cholesterol ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Cholesterol</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <!-- <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> -->
+                           </div>
+                           <!-- <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Warning ">
+                              <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                           <!-- Icons -->
+                           <p class="text-center ">Your LDL: 94</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Lower cholesterol</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Cholesterol) -->
+            <!-- Start Priorities Wizard Card (Blood Pressure) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-red ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/bloodpressure.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="45 " alt="Blood Pressure ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Blood Pressure</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <!-- <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> -->
+                              <!-- <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> -->
+                           </div>
+                           <!-- <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Warning ">
+                              <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                           <!-- Icons -->
+                           <p class="text-center ">Your BP: (135/86)</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <!-- <li><strong>Your Goal:</strong> Ideal BP less than 120/80</li> -->
+                              <li>Ideal BP less than 120/80</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Blood Pressure) -->
+            <!-- Start Priorities Wizard Card (Blood Sugar) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-yellow ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/bloodsugar.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="40 " alt="Blood Sugar ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Blood Sugar</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning ">
+                           <!--<img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                           <!-- Icons -->
+                           <p class="text-center ">Your A1C: 8</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> A1C less than 5.7</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Blood Sugar) -->
+            <!-- Start Priorities Wizard Card (Weight) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-yellow ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/weight.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="35 " alt="Weight ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Weight</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning ">
+                           <!--<img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-3 img-fluid " width="30 " alt="Success "> -->
+                           <!-- Icons -->
+                           <p class="text-center ">Your Weight: 197</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Consider losing weight</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Weight) -->
+            <!-- Start Priorities Wizard Card (Aspirin or Blood Thinners) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-green  ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/aspirin.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="40 " alt="Aspirin or Blood Thinners ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Aspirin or Blood Thinners</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <!--<img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning "> -->
+                           <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Success ">
+                           <!-- Icons -->
+                           <p class="text-center ">Not in use</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Lorem ipsum dolor sit amet</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Aspirin or Blood Thinners) -->
+            <!-- Start Priorities Wizard Card (Chronic Kidney Disease) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-green  ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/kidney.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="45 " alt="Chronic Kidney Disease ">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Chronic Kidney Disease</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <!--<img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning "> -->
+                           <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Success ">
+                           <!-- Icons -->
+                           <p class="text-center ">Tested negative</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Lorem ipsum dolor sit amet</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Chronic Kidney Disease) -->
+            <!-- Start Priorities Wizard Card (Opioid Use) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-green  ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/opioid.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="25 " alt="Opioid Use">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Opioid Use</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <!--<img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning "> -->
+                           <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Success ">
+                           <!-- Icons -->
+                           <p class="text-center ">Tested negative</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Lorem ipsum dolor sit amet</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Opioid Use) -->
+            <!-- Start Priorities Wizard Card (Cancer Screening) -->
+            <div class="container pb-1">
+               <div class="row">
+                  <div class="col-sm-12 wizard-card-green  ">
+                     <div class="row">
+                        <!-- Title -->
+                        <div class="col-6 col-md-3 pt-3 wizard-card-intro">
+                           <!-- Icons -->
+                           <img src="images/icons/cancer.png" class="mx-auto d-block pb-3 pt-2 img-fluid " width="22 " alt="Cancer Screening">
+                           <!-- Icons -->
+                           <p class="text-center font-weight-bold text-uppercase">Cancer Screening</p>
+                        </div>
+                        <!-- Title -->
+                        <!-- Result -->
+                        <div class="col-6 col-md-3 wizard-card-grey pt-3">
+                           <!-- Icons -->
+                           <!-- <div class="pb-4 pt-2 text-center ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert ">
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              <img src="images/icons/alert_icon.png " class="img-fluid " width="30 " alt="Alert "> 
+                              </div> -->
+                           <!--<img src="images/icons/warning_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Warning "> -->
+                           <img src="images/icons/success_icon.png " class="mx-auto d-block pb-4 pt-2 img-fluid " width="30 " alt="Success ">
+                           <!-- Icons -->
+                           <p class="text-center ">Tested negative</p>
+                        </div>
+                        <!-- Result -->
+                        <!-- Recommendations -->
+                        <div class="col-12 col-md-6 pt-3">
+                           <ul class="pb-1 list-unstyled">
+                              <li><strong>Your Goal:</strong> Lorem ipsum dolor sit amet</li>
+                              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                           </ul>
+                        </div>
+                        <!-- Recommendations -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- End Priorities Wizard Card (Cancer Screening) -->
+            <!-- Survey -->
+            <div class="container ">
+               <div class="row ">
+                  <div class="col-md-12 ">
+                     <p class="pt-3 text-center ">How are you liking the Wizard tool? Please take a quick survey to provide us feedback.<br /> <a href="# " alt="Health Partnerns Institute Survey ">www.healthpartners.com/wizardsurvey</a></p>
+                  </div>
+               </div>
+            </div>
+            <!-- Survey -->
+         </section>
+         </div>
+         <!-- MAYO STATIN TOOL TAB-->
+         <div class="tab-pane container fade" id="mayostatintool">
+            <section class="pb-5">  
+               <div class="container">
+                  <div class="row ">
+                     <div class="col-md-12 pt-4 ">
+                           <img src="images/icons/mayostatintool.png" class="img-fluid" alt="Mayo Statin Tool" >
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <!-- MAYO STATIN TOOL TAB-->
+         <!-- <div class="tab-pane container fade" id="medicationadherence">Medication Adherence</div> -->
+      </div>
+
+       <!-- FAQ Modal -->
+   <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="FAQModalTitle">Wizard FAQ's</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <h2>Why wasn't Priority Wizard recommended for my patient? </h2> 
+            <p>Wizard Tools are not available for patients over age 75 because care for this age group requires a greater degree of clinical judgment and individualization.  Wizard Tools online can only be used for patients age 18-75. If the rooming nurse did not get a BPA it might mean:</p>
+
+            <h2>How do I know what clinical issues on the list are most important?</h2>
+            <p>The clinical issues are listed in order of priority, with the ones giving greatest benefit at the top.  Keep in mind, the conditions listed on the patient version with check marks and “keep up the good work” messages are meant only for positive reinforcement to patients and do not need to be addressed at the visit.</p>
+
+            <h2>What happened to the 10-year ASCVD risk score on the patient version?</h2> 
+            <p>The score was removed from the patient version because patients told us in focus groups and through MY VOICE that they did not understand the score and it frightened some of them.  The risk score is still available on the “provider version” which can be shared with appropriate patients at the discretion of the provider along with an opportunity for questions to be answered.</p>
+
+            <h2>How do I give feedback or suggestions about Priority Wizard? </h2>
+            <p>We have already great feedback and many great suggestions through the “suggestions” tab that providers access through Wizard Tools within the visit navigator. We are also actively conducting provider interviews.  All feedback we receive is being tracked and analyzed.  Changes to Priority Wizard to incorporate learnings will be released on June 19.  In the meantime, keep your comments and suggestions coming!</p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+      </div>
+   </div>
+   <!-- FAQ Modal -->
+
+   <!-- Suggestions Modal -->
+   <div class="modal fade" id="SuggestionsModal" tabindex="-1" role="dialog" aria-labelledby="SuggestionsModal" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="SuggestionsModalTitle">We'd Like Your Feedback!</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+                  <form>
+                        <div class="form-group">
+                           <label for="exampleFormControlInput1">Name</label>
+                           <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">I am a...</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Physician Provider</option>
+                            <option>Advanced Practice Provider</option>
+                            <option>RN</option>
+                            <option>LPN, CMA/RMA</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Suggestions</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-primary">
+                              Mayo Statin Tool is missing
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary">
+                              Labs are wrong
+                         </button><br />
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              Medications are wrong
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              Recommedations are wrong
+                         </button>
+                         <button type="button" class="btn btn-sm btn-primary mt-2">
+                              I don't like the new design
+                         </button>
+                  </form>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+            </div>
+         </div>
+         </div>
+      </div>
+      <!-- Suggestions Modal -->
+   
+      <footer class="footer d-md-block d-print-none ">
+         <div class="container ">
+            <p class="text-center mt-3 ">2019 &copy; HealthPartners</p>
+         </div>
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js "></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+      <!-- Custom JavaScript -->
+      <script src="js/wizard.js"></script>
+   </body>
+</html>

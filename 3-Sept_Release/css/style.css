@@ -258,6 +258,12 @@ table {
    font-size: 12px;
 }
 
+th {
+    color: #909090;
+    font-size: 14px;
+    font-weight: normal;
+}
+
 .provider-margin {
     margin-left: -7px;
 }

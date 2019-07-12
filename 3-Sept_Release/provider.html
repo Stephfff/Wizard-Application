@@ -27,10 +27,10 @@
          </button>
              <div class="collapse navbar-collapse" id="navbarResponsive">
                  <ul class="navbar-nav ml-auto">
-                     <button type="button" class="btn btn-secondary mr-1" data-toggle="modal" data-target="#SuggestionsModal">
+                     <button type="button" class="btn btn-sm btn-secondary mr-1" data-toggle="modal" data-target="#SuggestionsModal">
                         <img src="images/icons/suggestions.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Suggestions
                    </button>
-                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#FAQModal">
+                     <button type="button" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#FAQModal">
                            <img src="images/icons/faq.png" class="img-fluid" width="18" alt="FAQ">&nbsp;&nbsp;FAQ
                      </button>
                  </ul>
@@ -77,17 +77,20 @@
            <!--Nav Pills-->
             <ul class="nav nav-pills">
               <li class="nav-item nav-pills-left">
-              <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient <br />Priorities</a>
+                  <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient Priorities</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#mayostatintool">Mayo Statin<br /> Tool</a>
+                  <a class="nav-link" data-toggle="pill" href="#mayostatintool">Mayo Statin Tool</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#medicationadherence">Medication <br />Adherence</a>
+                  <a class="nav-link" data-toggle="pill" href="#medicationadherence"><img src="images/icons/notification.png" class="img-fluid pr-2" width="32" alt="Patient">Medication Adherence</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#diseasespecificcds">Disease<br />Specific CDS</a>
+                  <a class="nav-link" data-toggle="pill" href="#diseasespecificcds">Disease Specific CDS</a>
               </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#diseasespecificcds"><img src="images/icons/notification.png" class="img-fluid pr-2" width="32" alt="Patient">Opioid Use Disorder</a>
+              </li> -->
            </ul>
       </div>
     </nav>
@@ -105,12 +108,12 @@
                   Wizard<sup>&copy;</sup></span>
                </div>
                <div class="col-md-9 text-right mb-3 d-none d-md-block d-print-none">
-                  <a href="patient.html" class="btn btn-primary"><img src="images/icons/patient_active.png" class="img-fluid"
+                  <a href="patient.html" class="btn btn-sm btn-primary"><img src="images/icons/patient_active.png" class="img-fluid"
                      width="18" alt="Patient">&nbsp;&nbsp;Patient</a>
-                  <a href="#provider" class="btn btn-primary disabled"><img src="images/icons/provider_nonactive.png"
+                  <a href="#provider" class="btn btn-sm btn-primary disabled"><img src="images/icons/provider_nonactive.png"
                      class="img-fluid" width="16" alt="Provider">&nbsp;&nbsp;Provider</a>
                   <!--Print Button-->
-                   <button onclick="printWizard()" class="btn btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                   <button onclick="printWizard()" class="btn btn-sm btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
                   <!--Print Button-->
                </div>
                <!-- Start Patient and Provider Information -->
@@ -621,35 +624,100 @@
       <!-- MAYO STATIN TOOL TAB-->
       <!-- MEDICATION ADHERENCE TAB-->
       <div class="tab-pane container fade" id="medicationadherence">
-         <div class="container pt-3">
-            <h2>Hypertension</h2>
-            <p><strong>Current BP:</strong> 139/80, Date</p>            
+         <div class="container pt-3 pb-4">
+            <!--Hypertension-->
+               <h2 class="pt-3">Hypertension</h2>
+               <p class="adherence-header"><strong>Current BP:</strong> 139/80, Date&nbsp;&nbsp;&nbsp;<strong>Last BP:</strong> 139/80, Date</p>  
+               <!--Button-->
+               <button class="btn btn-primary btn-sm text-white dispense-btn">Dispense History</button>
+               <!--Button-->
+               <table class="table table-hover">
+                  <thead>
+                     <tr>
+                        <th>Medication Adherence Score (MAS)*</th>
+                        <th>Medication(s)</th>
+                        <th>Medication Instructions</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><span class="no-dot"></span><span class="pr-4">N/A&nbsp;</span>Insufficient Data</td>
+                        <td>Lisinopril 10mg</td>
+                        <td>Take 2 Tabs by mouth 2 times a day with morning and evening meals.</td>
+                     </tr>
+                     <tr>
+                        <td><span class="red-dot"></span><span class="pr-4">19%</span>Potential Adherence</td>
+                        <td>Chlorthalidone 25mg</td>
+                        <td>Take 1 Tabs by mouth daily.</td>
+                     </tr>
+                     <tr>
+                        <td><span class="green-dot"></span><span class="pr-4">87%</span>Good Adherence</td>
+                        <td>Benazepril 25mg</td>
+                        <td>Take 1 Tabs by mouth daily.</td>
+                     </tr>
+                  </tbody>
+               </table>
+            <!--Hypertension-->
+            <!--Glycemic Control-->
+            <h2 class="pt-3">Glycemic Control</h2>
+            <p class="adherence-header"><strong>A1C:</strong> XXX, Date</p>  
+            <!--Button-->
+            <button class="btn btn-primary btn-sm text-white dispense-btn">Dispense History</button>
+            <!--Button-->
             <table class="table table-hover">
                <thead>
                   <tr>
-                  <th>Medication Adherence Score (MAS)*</th>
-                  <th>Medication(s)</th>
-                  <th>Medication Instructions</th>
+                     <th>Medication Adherence Score (MAS)*</th>
+                     <th>Medication(s)</th>
+                     <th>Medication Instructions</th>
                   </tr>
                </thead>
                <tbody>
                   <tr>
-                  <td>N/A&nbsp;&nbsp;&nbsp;&nbsp;Insufficient Data</td>
-                  <td>Lisinopril 10mg</td>
-                  <td>Take 2 Tabs by mouth 2 times a day with morning and evening meals.</td>
+                     <td><span class="grey-dot"></span><span class="pr-4">&nbsp;0%</span>Potential Reconciliation</td>
+                     <td>Metformin 1000mg bid</td>
+                     <td>Take 2 Tabs by mouth 2 times a day with morning and evening meals.</td>
                   </tr>
                   <tr>
-                  <td>&bull;19%&nbsp;&nbsp;&nbsp;&nbsp;Potential Adherence</td>
-                  <td>Chlorthalidone 25mg</td>
-                  <td>Take 1 Tabs by mouth daily.</td>
+                     <td><span class="red-dot"></span><span class="pr-4">79%</span>Potential Adherence</td>
+                     <td>Bromocriptine mesylate 10mg</td>
+                     <td>Take 1 Tabs by mouth daily.</td>
                   </tr>
                   <tr>
-                  <td>&bull;87%&nbsp;&nbsp;&nbsp;&nbsp;Good Adherence</td>
-                  <td>Benazepril 25mg</td>
-                  <td>Take 1 Tabs by mouth daily.</td>
+                     <td><span class="green-dot"></span><span class="pr-4">80%</span>Good Adherence</td>
+                     <td>Empagliflozin 25mg</td>
+                     <td>Take 1 Tabs by mouth daily.</td>
                   </tr>
                </tbody>
             </table>
+         <!--Glycemic Control-->
+         <!--Lipid Management-->
+         <h2 class="pt-3">Lipid Management</h2>
+         <p class="adherence-header"><strong>LDL:</strong> XXX, Date</p>  
+         <!--Button-->
+         <button class="btn btn-primary btn-sm text-white dispense-btn">Dispense History</button>
+         <!--Button-->
+            <table class="table table-hover">
+               <thead>
+                  <tr>
+                     <th>Medication Adherence Score (MAS)*</th>
+                     <th>Medication(s)</th>
+                     <th>Medication Instructions</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><span class="no-dot"></span><span class="pr-4">&nbsp;N/A</span>Insufficient Data</td>
+                     <td>Simvastatin 40mg</td>
+                     <td>Take 2 Tabs by mouth 2 times a day with morning and evening meals.</td>
+                  </tr>
+               </tbody>
+            </table>
+         <!--Lipid Management-->
+         </div>
+         <div class="pb-5">
+            <p class="bg-light p-2"><strong>Opt out of pharmacy outreach:</strong> Patient would like to not be contacted about medication adherence. <a href="#">Remove patient from call list.</a></p>
+            <p class="small">*Medication adherence issue is defined as a medication adherence score (MAS) of less than 80%.  The MAS is determined by comparing how a patient is supposed to be taking a medication based on the active medication list in EPIC with the amount of medication that has been dispensed.  For example, if a patient is expected to have used 360 metformin pills in the last 6 months, but has only been dispensed enough for 180 days, the MAS is 50%.</p>
          </div>
       </div>
       <!-- MEDICATION ADHERENCE TAB-->

@@ -264,6 +264,53 @@ th {
     font-weight: normal;
 }
 
+.red-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #C42653;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.green-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #009B49;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.grey-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #707070;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.no-dot {
+    height: 3px;
+    width: 15px;
+    background-color: #212529;
+    border-radius: 0%;
+    display: inline-block;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
+
+.dispense-btn {
+    float: right;
+    margin-top: -45px;
+}
+
+.adherence-header{
+    margin-bottom: 5px;
+}
+
 .provider-margin {
     margin-left: -7px;
 }

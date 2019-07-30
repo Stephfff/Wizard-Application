@@ -78,7 +78,15 @@
                   <a href="#patient" class="btn btn-sm btn-primary disabled"><img src="images/icons/patient_nonactive.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Patient</a>
                   <a href="provider.html" class="btn btn-sm btn-primary"><img src="images/icons/provider_active.png" class="img-fluid" width="18" alt="Provider">&nbsp;&nbsp;Provider</a>
                   <!--Print Button-->
-                  <button onclick="printWizard()" class="btn btn-sm btn-secondary text-white"><img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print</button>
+                  <!-- Dropdown Print Button-->
+                  <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown">
+                     <img src="images/icons/print.png" class="img-fluid" width="16" alt="Patient">&nbsp;&nbsp;Print
+                     </button>
+                     <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">Single-Sided</a>
+                     <a class="dropdown-item" href="#">Double-Sided</a>
+                  </div>
+                  <!-- Dropdown Print Button-->
                    <!--Print Button-->
                </div>
                <!-- Start Patient and Provider Information -->
@@ -596,7 +604,8 @@
             <!--Lipid Management-->
             </div>
             <div class="pb-5">
-               <p class="bg-light p-2"><strong>Pharmacist Outreach:</strong> Click <a href="#" style="text-decoration: underline;font-weight: bold;">PATIENT DECLINES</a> if you do not want patient to receive a phone call from the pharmacist working with your clinic on improving medication adherence.</p>
+               <p class="bg-light p-2"><strong>Pharmacist Outreach:</strong>  Click <a href="#" style="text-decoration: underline;font-weight: bold;">Patient Declines</a> or <a href="#" style="text-decoration: underline;font-weight: bold;">Provider Declines</a> to prevent a phone call to the patient from the pharmacist working with your clinic on improving medication adherence.</p>
+
                <p class="small">*Medication adherence issue is defined as a medication adherence score (MAS) of less than 80%.  The MAS is determined by comparing how a patient is supposed to be taking a medication based on the active medication list in EPIC with the amount of medication that has been dispensed.  For example, if a patient is expected to have used 360 metformin pills in the last 6 months, but has only been dispensed enough for 180 days, the MAS is 50%.</p>
             </div>
          </div>

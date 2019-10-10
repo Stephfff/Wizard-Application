@@ -7,8 +7,8 @@
   body { 
     margin: 0; 
     padding:0; 
-    -webkit-print-color-adjust: exact !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fffada', endColorstr='#fffada')"; /* IE8 */ 
+    /* -webkit-print-color-adjust: exact !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fffada', endColorstr='#fffada')"; /* IE8 */  */
   }
   
   /* Ensures that the page break is seen by the printer */

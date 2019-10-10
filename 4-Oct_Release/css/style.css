@@ -35,6 +35,12 @@ h2 {
     color: #523492;
 }
 
+h3 {
+    color: #C42653;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 span.titletext {
     font-family: 'Cinzel', serif;
     font-size: 18px;
@@ -262,12 +268,23 @@ table {
    font-size: 12px;
 }
 
+/* Medication Adherence Table */
+.table.table-bordered > thead > tr > th{
+    border:1px solid #544A4C !important;
+    text-align:center;
+    } 
+    
+.table.table-bordered > tbody > tr > td{
+border:1px solid #544A4C !important;
+}
+
 .dispense-table {
     font-size: 12px;
 }
 
 th {
-    color: #909090;
+    color: #ffffff;
+    background-color: #000000;
     font-size: 14px;
     font-weight: normal;
 }

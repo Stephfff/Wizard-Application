@@ -71,7 +71,7 @@
          <!-- OUD WIZARD TAB-->
          <div class="tab-pane container active" id="oudwizard">
             <!-- OUD Notifications -->
-            <section class="pt-4 pb-2">
+            <section class="pt-2 pb-2">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12 pt-2 pb-2">
@@ -95,14 +95,14 @@
                   <div class="row">
                      <div class="col-md-6 pt-2">
                         <!-- RELEVANT MEDICATIONS-->
-                        <h6><strong>Relevant Medications</strong></h6>
+                        <h6><strong>Relevant Medications</strong>&nbsp;&nbsp;<a href="#"><u>View More</u></a></h6>
                         <p>HYDROMORPHONE 5MG/1ML ORAL CONCENTRATE<br />
                            ACETAMINOPHEN-CODEINE 120-12 MG/5ML OR SOLN<br />
                            TEMAZEPAM 22.5 MG OR CAPS
                         </p>
                         <!-- RELEVANT MEDICATIONS-->
                         <!-- URING DRUG SCREENING-->
-                        <h6><strong>Recent Urine Drug Screening</strong></h6>
+                        <h6><strong>Recent Urine Drug Screening</strong>&nbsp;&nbsp;<a href="#"><u>View More</u></a></h6>
                         <p>1/25/19 - <span class="text-danger">Positive</span>
                         </p>
                         <!-- URING DRUG SCREENING-->
@@ -111,10 +111,10 @@
                         <strong>Action Items</strong> 
                         <!--BUTTONS-->
                         <div class="col-md-12 m-0">
-                           <button type="button" class="btn btn-sm btn-primary mt-2" data-toggle="modal" data-target="#SuggestionsModal">
+                           <button type="button" class="btn btn-sm btn-primary mt-2" data-toggle="modal" data-target="#">
                               <img src="images/white/order.png" class="img-fluid" width="18" alt="Suggestions">&nbsp;&nbsp;Order Rescue Kit
                            </button>
-                           <button type="button" class="btn btn-sm btn-secondary mt-3" data-toggle="modal" data-target="#SuggestionsModal">
+                           <button type="button" class="btn btn-sm btn-secondary mt-3" data-toggle="modal" data-target="#">
                               View PDMP
                            </button>
                         </div>
@@ -122,469 +122,100 @@
                      </div>
                      <div class="col-md-3 pt-2 pb-2 border-left">
                         <strong>Patient Education Materials</strong>
-                        <p><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Medication Overview</u></a><br />
-                           <img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Suboxone</u></a><br />
-                           <img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Methadone</u></a><br />
-                           <img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Naltrexone</u></a><br />
-                           <img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Safer Use of IV Drugs</u></a>
-                        </p>
+                        <ul class="list-unstyled">
+                           <li><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Medication Overview</u></li>
+                           <li><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Suboxone</u></a></li>
+                           <li><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Methadone</u></a></li>
+                           <li><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Naltrexone</u></a></li>
+                           <li><img src="images/icons/print_dark.png" alt="Print">&nbsp;<a href="#"><u>Safer Use of IV Drugs</u></a></li>
+                        </ul>
                      </div>
                   </div>
                </div>
             </section>
             <!-- HEADER SECTION -->
 
-            <!-- Subnav Tabs -->
-            <nav class="navbar-expand-lg subnav">
+            <!-- OUD Tabs -->
+            <section class="mt-3 border border">
                <div class="container">
-                  <div class="collapse navbar-collapse" id="navbarText">
-                  <!--Nav Pills-->
-                  <ul class="nav nav-pills">
-                     <li class="nav-item nav-pills-left">
-                        <a class="nav-link active" data-toggle="pill" href="#patientpriorities">Patient Priorities</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#mayostatintool">Mayo Statin Tool</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#medicationadherence"><img src="images/icons/notification.png" class="img-fluid pr-2" width="32" alt="Patient">Medication Adherence</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#diseasespecificcds">Disease Specific CDS</a>
-                     </li>
-                     <!-- <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#diseasespecificcds"><img src="images/icons/notification.png" class="img-fluid pr-2" width="32" alt="Patient">Opioid Use Disorder</a>
-                     </li> -->
-                  </ul>
+                  <div class="row">
+                     <div class="col-xs-12 ">
+                        <!--Tabbed Nav Start-->
+                           <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                 <a class="nav-link active" id="diagnose-tab" data-toggle="tab" href="#diagnose" role="tab" aria-controls="diagnose" aria-selected="true">Diagnose</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" id="selectoud-tab" data-toggle="tab" href="#selectoud" role="tab" aria-controls="selectoud" aria-selected="false">Select OUD<br />Medication</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" id="startoud-tab" data-toggle="tab" href="#startoud" role="tab" aria-controls="startoud" aria-selected="false">Start OUD<br />Medication</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" id="continueoud-tab" data-toggle="tab" href="#continueoud" role="tab" aria-controls="continueoud" aria-selected="false">Continue OUD<br />Medication</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" id="othercare-tab" data-toggle="tab" href="#othercare" role="tab" aria-controls="othercare" aria-selected="false">Other Care</a>
+                              </li>
+                           </ul>
+                           <!--Tabbed Nav End-->
+                           <!--Tabbed Nav Content Start-->
+                           <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade show active" id="diagnose" role="tabpanel" aria-labelledby="diagnose-tab">
+                              <!--Accordion Content Start-->
+                              <div class="accordion" id="accordionExample">
+                                 <!--TAPS Start-->
+                                 <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          Collapsible Group Item #1
+                                       </button>
+                                    </h2>
+                                    </div>
+                              
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                    </div>
+                                 </div>
+                                 <!--TAPS End-->
+                                 <!--DSM Start-->
+                                 <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Collapsible Group Item #2
+                                       </button>
+                                    </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                    </div>
+                                 </div>
+                                 <!--DSM End-->
+                              </div>
+                              <!--Accordion Content End-->
+                           </div>
+                           <!--Tabbed Nav Content End-->
+                           <div class="tab-pane fade" id="selectoud" role="tabpanel" aria-labelledby="selectoud-tab">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</div>
+                           <div class="tab-pane fade" id="startoud" role="tabpanel" aria-labelledby="startoud-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+                           <div class="tab-pane fade" id="continueoud" role="tabpanel" aria-labelledby="continueoud-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+                           <div class="tab-pane fade" id="othercare" role="tabpanel" aria-labelledby="othercare-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+                           </div>
+                     </div>
+                  </div>
                </div>
-            </nav>
-            <!-- Subnav Tabs -->
+            </section>
+            <!-- OUD Tabs -->
 
 
          </div>
          <!-- OUD WIZARD TAB-->
-
-       <!-- FAQ Modal -->
-   <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModal" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="FAQModalTitle">Wizard FAQ's</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-            <h2>Why wasn't Priority Wizard recommended for my patient? </h2> 
-            <p>Wizard Tools are not available for patients over age 75 because care for this age group requires a greater degree of clinical judgment and individualization.  Wizard Tools online can only be used for patients age 18-75. If the rooming nurse did not get a BPA it might mean:</p>
-
-            <h2>How do I know what clinical issues on the list are most important?</h2>
-            <p>The clinical issues are listed in order of priority, with the ones giving greatest benefit at the top.  Keep in mind, the conditions listed on the patient version with check marks and “keep up the good work” messages are meant only for positive reinforcement to patients and do not need to be addressed at the visit.</p>
-
-            <h2>What happened to the 10-year ASCVD risk score on the patient version?</h2> 
-            <p>The score was removed from the patient version because patients told us in focus groups and through MY VOICE that they did not understand the score and it frightened some of them.  The risk score is still available on the “provider version” which can be shared with appropriate patients at the discretion of the provider along with an opportunity for questions to be answered.</p>
-
-            <h2>How do I give feedback or suggestions about Priority Wizard? </h2>
-            <p>We have already great feedback and many great suggestions through the “suggestions” tab that providers access through Wizard Tools within the visit navigator. We are also actively conducting provider interviews.  All feedback we receive is being tracked and analyzed.  Changes to Priority Wizard to incorporate learnings will be released on June 19.  In the meantime, keep your comments and suggestions coming!</p>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         </div>
-      </div>
-      </div>
-   </div>
-   <!-- FAQ Modal -->
-
-   <!-- Suggestions Modal -->
-   <div class="modal fade" id="SuggestionsModal" tabindex="-1" role="dialog" aria-labelledby="SuggestionsModal" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="SuggestionsModalTitle">We'd Like Your Feedback!</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-            </div>
-            <div class="modal-body">
-                  <form>
-                        <div class="form-group">
-                           <label for="exampleFormControlInput1">Name</label>
-                           <input type="email" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlInput1">Email address</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlSelect1">I am a...</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Physician Provider</option>
-                            <option>Advanced Practice Provider</option>
-                            <option>RN</option>
-                            <option>LPN, CMA/RMA</option>
-                            <option>Other</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlTextarea1">Suggestions</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-primary">
-                              Mayo Statin Tool is missing
-                         </button>
-                         <button type="button" class="btn btn-sm btn-primary">
-                              Labs are wrong
-                         </button><br />
-                         <button type="button" class="btn btn-sm btn-primary mt-2">
-                              Medications are wrong
-                         </button>
-                         <button type="button" class="btn btn-sm btn-primary mt-2">
-                              Recommedations are wrong
-                         </button>
-                         <button type="button" class="btn btn-sm btn-primary mt-2">
-                              I don't like the new design
-                         </button>
-                  </form>
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-            </div>
-         </div>
-         </div>
-      </div>
-      <!-- Suggestions Modal -->
-
-   <!-- Dispense History Modal -->
-   <div class="modal fade" id="DH_modal" tabindex="-1" role="dialog" aria-labelledby="dispensehistory" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="DH_modal">Hypertension Dispense History (from 6/13/18 - 5/30/19)</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-            <div class="accordion">
-               <h6 class="accordion-toggle">Lisinopril</h6>
-               <div class="accordion-content">
-                  <table class="table table-hover dispense-table">
-                     <thead>
-                        <tr>
-                           <th>&nbsp;</th>
-                           <th>Dispensed</th>
-                           <th>Fill Gap</th>
-                           <th>Days Supply</th>
-                           <th>Quantity &amp; Form</th>
-                           <th>Provider</th>
-                           <th>Pharmacy</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>06/01/2019</td>
-                           <td>40 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/22/2019</td>
-                           <td>121 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Prinivil 10mg</td>
-                           <td>12/22/2018</td>
-                           <td>-8 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Zestril 10mg</td>
-                           <td>10/01/2018</td>
-                           <td>0 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Zestril 10mg</td>
-                           <td>07/01/2018</td>
-                           <td>0 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Zestril 10mg</td>
-                           <td>04/02/2018</td>
-                           <td>1 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>01/04/2018</td>
-                           <td>3 days</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               
-               <h6 class="accordion-toggle">Chlorthalidone</h6>
-               <div class="accordion-content">
-                  <table class="table table-hover dispense-table">
-                     <thead>
-                        <tr>
-                           <th>&nbsp;</th>
-                           <th>Dispensed</th>
-                           <th>Days Supply</th>
-                           <th>Quantity</th>
-                           <th>Provider</th>
-                           <th>Pharmacy</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-               
-               <h6 class="accordion-toggle">Benazepril</h6>
-               <div class="accordion-content">
-                  <table class="table table-hover dispense-table">
-                     <thead>
-                        <tr>
-                           <th>&nbsp;</th>
-                           <th>Dispensed</th>
-                           <th>Days Supply</th>
-                           <th>Quantity</th>
-                           <th>Provider</th>
-                           <th>Pharmacy</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                        <tr>
-                           <td>Qbrelis 10mg</td>
-                           <td>04/01/2017</td>
-                           <td>90</td>
-                           <td>90 Unspecified</td>
-                           <td>Kim, Young, Dae, MD</td>
-                           <td>CVS 16213 IN TARGET …</td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>   
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         </div>
-      </div>
-      </div>
-   </div>
-   <!-- Dispense History Modal -->
+   
    
       <footer class="footer d-md-block d-print-none ">
          <div class="container ">
